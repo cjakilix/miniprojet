@@ -1,0 +1,122 @@
+/*
+  MENU (Mobile)
+*/
+
+#slide-menu {
+    position: fixed;
+    top: 0;
+    left: 0px;
+    bottom: 0;
+    display: block;
+    float: left;
+    width: 0px;
+    height: 100%;
+    background:#969696;
+    z-index: 99999;
+
+
+    -moz-transition: all 300ms;
+    -webkit-transition: all 300ms;
+    transition: all 300ms;
+
+    > ul {
+        display: none;
+        margin: 20px;
+        padding: 0;
+        list-style: none;
+
+        -moz-transition: all 300ms;
+        -webkit-transition: all 300ms;
+        transition: all 300ms;
+
+        li {
+            color: #F2F2F2;
+            padding: 6px 0;
+            cursor: pointer;
+
+            &:hover { 
+                color: #fff;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.menu-active #slide-menu { 
+    left: 0px;
+    width: 200px;
+    position: fixed;
+
+    >ul {
+        display: block;
+    }
+
+}
+
+
+/*
+  CONTENT
+*/
+
+#content {
+    position: relative;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    background: #fcfeff;
+    z-index: 9999;
+
+    -moz-transition: all 300ms;
+    -webkit-transition: all 300ms;
+    transition: all 300ms;
+
+    .menu-trigger {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 36px;
+        height: 36px;
+        background: #969696;
+        cursor: pointer;
+        z-index: 9999;
+        
+
+        -moz-transition: all 300ms;
+        -webkit-transition: all 300ms;
+        transition: all 300ms;
+
+        &:hover {
+            background: #F2F2F2;
+         }
+
+        &:after {
+            box-shadow: 0 0 0 1px white, 0 7px 0 1px white, 0 14px 0 1px white;
+            content: "";
+            display: block;
+            height: 0;
+            margin-top: -8px;
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            width: 16px;
+        } 
+    }
+}
+
+.menu-active #content { 
+    left: 200px; /*mobile first*/
+}
+
+@media only screen and (min-width: 40.063em) {
+
+    .menu-active #content { 
+    left: 0px; /*Medium / Large */
+    }
+
+} /* min-width 641px, medium screens */
+
+
+.menu-active #content .menu-trigger {
+    left: 200px;
+
+}
