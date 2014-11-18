@@ -1,4 +1,9 @@
-(function() {
+$(".menu-trigger").click(function() {
+            $("body").toggleClass("menu-active");
+        });
+
+
+/*(function() {
     var $body = document.body,
     $menuTrigger = $body.getElementsByClassName('menu-trigger')[0];
 
@@ -8,4 +13,5 @@
         });
     }
 
-}).call(this);
+}).call(this);*/
+

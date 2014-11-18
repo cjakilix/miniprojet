@@ -9,7 +9,7 @@ var $slider = $('#slider'), // on cible le bloc du carrousel
 $img.css('display', 'none'); // on cache les images
 $currentImg.css('display', 'block'); // on affiche seulement l'image courante
 
-$slider.append('<div class="controls"> <span class="prev">Precedent</span> <span class="next">Suivant</span> </div>');
+
 
 $('.next').click(function(){ // image suivante
 
