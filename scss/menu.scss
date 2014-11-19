@@ -1,5 +1,5 @@
 /*
-  MENU (Mobile)
+  MENU
 */
 
 #slide-menu {
@@ -106,16 +106,16 @@
     left: 200px; /*mobile first*/
 }
 
-@media only screen and (min-width: 40.063em) {
+@media only screen and (min-width: 40.063em) { /* min-width 641px, medium screens */
 
     .menu-active #content { 
     left: 0px; /*Medium / Large */
     }
 
-} /* min-width 641px, medium screens */
+} 
 
 
-.menu-active #content .menu-trigger {
+.menu-active #content .menu-trigger { /* Push menu button with the menu*/
     left: 200px;
 
 }
